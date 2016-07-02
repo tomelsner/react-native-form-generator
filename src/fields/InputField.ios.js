@@ -17,10 +17,10 @@ export class InputField extends React.Component{
   render(){
     return(<InputComponent
       {...this.props}
-      //onChange={this.handleChange.bind(this)}
+      
       ref='fieldComponent'
       onValidation={this.handleValidation.bind(this)}
-      labelStyle={formStyles.fieldText}
+      labelStyle={[formStyles.fieldText, this.props.labelStyle]}
       inputStyle={[formStyles.input,
           (this.props.multiline)?formStyles.multiline:{},
           (this.props.label)?formStyles.textRight:{},
