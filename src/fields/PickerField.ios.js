@@ -15,8 +15,12 @@ export class PickerField extends React.Component{
  */
     return(<PickerComponent
       {...this.props}
-      labelStyle={[formStyles.fieldText, this.props.labelStyle]}
-      valueStyle = {[formStyles.fieldValue,this.props.valueStyle]}
+      labelStyle={[formStyles.fieldText,
+        this.props.labelStyle
+      ]}
+      valueStyle = {[formStyles.fieldValue,
+        this.props.style
+      ]}
       valueContainerStyle = {[formStyles.alignRight,
           formStyles.horizontalContainer, this.props.valueContainerStyle]}
       containerStyle={[
